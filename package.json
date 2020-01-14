@@ -1,0 +1,24 @@
+{
+  "name": "londonactivities",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harry-pm/LondonActivities.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harry-pm/LondonActivities/issues"
+  },
+  "homepage": "https://github.com/harry-pm/LondonActivities#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "knex": "^0.20.7",
+    "pg": "^7.17.1"
+  }
+}
