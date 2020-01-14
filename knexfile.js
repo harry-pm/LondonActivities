@@ -1,7 +1,12 @@
 module.exports = {
     development: {
       client: 'pg',
-      connection: 'postgres://localhost/activities',
+      connection: {
+        host: 'localhost',
+        database: 'activities',
+        user: 'postgres',
+        password: 'postgres'
+      },
       migrations: {
         directory: __dirname + '/db/migrations'
       },
@@ -9,5 +14,4 @@ module.exports = {
         directory: __dirname + '/db/seeds/development'
       }
     },
-  };
-  
+};
