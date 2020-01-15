@@ -30,26 +30,28 @@ describe('API Routes', function() {
     });
   });
 
-  // describe('GET /api/v1/shows', function() {
-  //   it('should return all shows', function(done) {
-  //     chai.request(server)
-  //     .get('/api/v1/shows')
-  //     // .end(function(err, res) {
-  //     // res.should.have.status(200);
-  //     // res.should.be.json; // jshint ignore:line
-  //     // res.body.should.be.a('array');
-  //     // res.body.length.should.equal(4);
-  //     // res.body[0].should.have.property('name');
-  //     // res.body[0].name.should.equal('Suits');
-  //     // res.body[0].should.have.property('channel');
-  //     // res.body[0].channel.should.equal('USA Network');
-  //     // res.body[0].should.have.property('genre');
-  //     // res.body[0].genre.should.equal('Drama');
-  //     // res.body[0].should.have.property('rating');
-  //     // res.body[0].rating.should.equal(3);
-  //     // res.body[0].should.have.property('explicit');
-  //     // res.body[0].explicit.should.equal(false);
-  //     done();
-  //     });
-  //   });
+  describe('GET /showall', function() {
+
+    it('should return all shows', function(done) {
+      chai.request(server)
+      .get('/showall')
+      .end(function(err, res) {
+      res.should.have.status(200);
+      res.should.be.json; // jshint ignore:line
+      res.body.should.be.a('array');
+      res.body.length.should.equal(4);
+      res.body[0].should.have.property('id');
+      res.body[0].id.should.equal(1);
+      res.body[0].should.have.property('activity');
+      res.body[0].activity.should.equal('Arcade');
+      res.body[0].should.have.property('description');
+      res.body[0].description.should.equal('Lovely arcade next to the Lakeside shopping center. They have a varitety of games and physical games with a bowling alley at the back. The piano tiles will cause hair-loss as my reactions are far superior to its ability to register hits');
+      res.body[0].should.have.property('location');
+      res.body[0].location.should.equal('Lakeside');
+      done();
+      });
+    });
+
+    
+  });
 });
