@@ -3,7 +3,14 @@ process.env.NODE_ENV = 'test';
 var chai = require('chai');
 var chaiHttp = require('chai-http');
 var server = require('../app');
-var knex = require('../db/knex');
+// var knex = require('../db/knex');
+
+const setupFile = require('../knexfile').development
+var knex = require('knex')({
+    client: setupFile.client,
+    connection: setupFile.connection,
+    pool: { min: 0, max: 7 }
+  })
 
 var should = chai.should();
 
