@@ -14,4 +14,11 @@ Usere Stories:
 
 How to run set up:
     - ``` npm install ```
-    - 
+    - download postgres
+    - create a local postgres databse called "activities"
+    - run the migrate file `knex migrate:latest`
+    - run the seed file `knex run seed`
+    - `nodemon app.js`
+
+     knex migrate:latest --env test
+     knex seed:run --env test
